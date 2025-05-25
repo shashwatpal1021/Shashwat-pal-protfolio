@@ -6,27 +6,27 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="pt-30 md:pt-32 pb-10 md:pb-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
+      className="md:pt-32 pb-10 md:pb-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
     >
-      <div className="container mt-35 p-10 mx-auto px-6">
+      <div className="container mt-10 md:mt-35 p-6 md:p-10 mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 dark:text-white">
+          <div className="md:w-1/2 w-full">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 dark:text-white text-center md:text-left">
               Hi, I'm{" "}
               <span className="text-indigo-600 dark:text-indigo-400">
                 Shashwat Pal
               </span>
             </h1>
-            <h2 className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-6">
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-6 text-center md:text-left">
               Full Stack Developer
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 text-center md:text-left">
               I build exceptional digital experiences that are fast, accessible,
               visually appealing, and responsive. Let's turn your vision into
               reality.
             </p>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
               <a
                 href="#contact"
                 className="group flex items-center px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors shadow-md"
@@ -85,7 +85,7 @@ const Hero: React.FC = () => {
               </a>
             </div>
 
-            <div className="flex mt-8 space-x-4">
+            <div className="flex mt-8 space-x-4 justify-center md:justify-start">
               <a
                 href="https://github.com/shashwatpal1021"
                 target="_blank"
@@ -111,11 +111,10 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="md:w-1/2 flex justify-center">
-            <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 from-indigo-400 to-purple-500 dark:from-indigo-500 dark:to-purple-600 opacity-80"></div>
+          <div className="md:w-1/2 w-full flex justify-center mt-10 md:mt-0">
+            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center relative overflow-hidden">
               <img
-                className="ml-15 mt-15"
+                className="object-cover w-full h-full rounded-full"
                 src={shashwatImg}
                 alt="shashwat.pal"
               />

@@ -8,6 +8,26 @@ const About: React.FC = () => {
     >
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
+          {/* Animated Down Arrow */}
+          {/* <div className="flex justify-center mb-6">
+            <span className="relative flex items-center justify-center w-12 h-12">
+              <span className="absolute inset-0 rounded-full border-2 border-indigo-400 group-hover:border-yellow-400 transition-colors duration-300"></span>
+              <svg
+                className="relative z-10 w-6 h-6 text-indigo-400 animate-bounce transition-colors duration-300"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2.5}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 5v14M19 12l-7 7-7-7"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </span>
+          </div> */}
+
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 dark:text-white">
             About Me
           </h2>
