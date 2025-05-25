@@ -6,9 +6,9 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="pt-24 md:pt-32 pb-10 md:pb-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
+      className="pt-30 md:pt-32 pb-10 md:pb-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
     >
-      <div className="container mt-30 mx-auto px-6">
+      <div className="container mt-35 p-10 mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 dark:text-white">
