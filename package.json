@@ -1,12 +1,12 @@
 {
-  "home":"http://shashwatpal1021.github.io/Shashwat-pal-protfolio/",
+  "home": "http://shashwatpal1021.github.io/Shashwat-pal-protfolio/",
   "name": "vite-react-typescript-starter",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "predeploy": "gh-pages -d dist",
+    "predeploy": "gh-pages -d build",
     "deploy": "npm run build && npm run predeploy",
     "build": "vite build",
     "lint": "eslint .",

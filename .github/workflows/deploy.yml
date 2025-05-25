@@ -1,31 +1,20 @@
-name: Deploy to GitHub Pages
-
+name: Linting and formatiing on PR
 on:
-  push:
+  pull_request:
     branches:
-      - main
+      - "**"
 
 jobs:
-  deploy:
+  Continuous-Integration:
+
+    name: Performs linting, formatting on the application
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout the Repository
+        uses: actions/checkout@v3
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
+      - name: Run linting check
+        run: npm run lint
 
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build project
+      - name: Run build
         run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
