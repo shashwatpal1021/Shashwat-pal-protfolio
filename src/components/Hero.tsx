@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
               </a>
 
               <a
-                href="https://drive.google.com/file/d/1g2UphPtnmbg3jJl4h2540mOKBc-tTFg4/view?usp=sharing"
+                href="https://drive.google.com/file/d/1NeeGhNWmKbmV37knKpr2Tqz8rAFs2uRC/view?usp=sharing"
                 className="px-6 py-3 bg-yellow-600 dark:bg-green-700 text-white rounded-lg hover:bg-green-600 dark:hover:bg-green-800 transition-colors shadow-md"
                 target="_blank"
                 rel="noopener noreferrer"
