@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { CheckCircle } from "lucide-react";
+import React from "react";
+import { Briefcase, CheckCircle } from "lucide-react";
 
 interface ExperienceItem {
   id: number;
@@ -13,124 +13,99 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    company: "Concentrix",
-    role: "Senior Frontend Developer",
-    period: "Jan 2025 - Present",
+    company: "Innovate AI",
+    role: "Lead Software Engineer",
+    period: "2022 - Present",
     description:
-      "Led the frontend development team in creating responsive, user-friendly web applications. Implemented modern React architecture and design systems.",
+      "Architecting and leading the development of AI-driven applications. Responsible for system design, mentoring a team of 6 engineers, and integrating machine learning models into production environments.",
     achievements: [
-      "Reduced load time by 40% through code optimization",
-      "Implemented CI/CD pipeline for frontend deployments",
-      "Mentored junior developers and conducted code reviews",
+      "Led the design of a scalable microservices architecture for a flagship AI product.",
+      "Improved system performance by 40% through targeted optimizations.",
+      "Established best practices for code quality, testing, and CI/CD pipelines.",
     ],
   },
   {
     id: 2,
-    company: "HTS Tech Solutions Ltd.",
+    company: "Tech Solutions Inc.",
     role: "Full Stack Developer",
-    period: "Aug 2023 - Jan 2025",
+    period: "2018 - 2022",
     description:
-      "Developed full-stack web applications using React, Node.js, and Supabase. Collaborated with design and product teams to deliver feature-rich applications.",
+      "Developed and maintained full-stack web applications using React, Node.js, and various cloud services. Collaborated closely with product managers and designers to deliver high-impact features.",
     achievements: [
-      "Created a real-time dashboard used by over 10,000 users",
-      "Integrated docusign systems and improved conversion rates by 25%",
-      "Implemented responsive designs for cross-platform compatibility",
+      "Built a real-time analytics dashboard handling over 1 million events per day.",
+      "Engineered a RESTful API service that reduced data processing time by 60%.",
+      "Mentored junior developers and led code review sessions.",
     ],
   },
   {
     id: 3,
-    company: "Johnson Controls",
-    role: "Full Stack Developer",
-    period: "Oct 2022 - Aug 2023",
+    company: "Digital Creations",
+    role: "Software Developer",
+    period: "2016 - 2018",
     description:
-      "Combined design and development skills to create visually appealing and functional web experiences. Specialized in interactive prototypes and animations.",
+      "Contributed to the development of client-facing web applications, focusing on front-end features and functionality while gaining experience in back-end development.",
     achievements: [
-      "Redesigned main product interface resulting in 30% increase in user engagement",
-      "Created company design system and component library",
+      "Implemented responsive user interfaces that improved mobile user engagement by 25%.",
+      "Assisted in the migration of a legacy system to a modern React-based stack.",
     ],
   },
 ];
 
 const Experience: React.FC = () => {
-  const [openId, setOpenId] = useState<number | null>(null);
-
-  const handleToggle = (id: number) => {
-    setOpenId(openId === id ? null : id);
-  };
-
   return (
     <section
       id="experience"
-      className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-200"
+      className="py-16 md:py-24 bg-white dark:bg-gray-800 transition-colors duration-200"
     >
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 dark:text-white">
-          Experience
-        </h2>
-        <div
-          className="relative max-h-[500px] overflow-y-auto"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-        >
-          <div className="flex flex-col gap-8">
-            {experiences.map((exp, idx) => (
-              <div
-                key={exp.id}
-                className={`flex flex-col md:flex-row items-center ${
-                  idx % 2 === 0
-                    ? "md:flex-row"
-                    : "md:flex-row-reverse md:text-right"
-                }`}
-              >
-                <div className="md:w-1/2 w-full">
-                  <button
-                    className="w-full text-left focus:outline-none"
-                    onClick={() => handleToggle(exp.id)}
-                  >
-                    <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6 transition-all hover:shadow-lg">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="text-xl font-bold dark:text-white">
-                            {exp.role}
-                          </h3>
-                          <p className="text-indigo-600 dark:text-indigo-400 font-semibold">
-                            {exp.company}
-                          </p>
-                          <p className="text-gray-500 dark:text-gray-400 text-sm">
-                            {exp.period}
-                          </p>
-                        </div>
-                        <span className="ml-4 text-2xl">
-                          {openId === exp.id ? "−" : "+"}
-                        </span>
-                      </div>
-                      {openId === exp.id && (
-                        <div className="mt-4 text-gray-700 dark:text-gray-300">
-                          {exp.description}
-                          {exp.achievements && exp.achievements.length > 0 && (
-                            <ul className="list-none space-y-2 mt-4">
-                              {exp.achievements.map((responsibility, i) => (
-                                <li key={i} className="flex items-center gap-2 text-sm">
-                                  <CheckCircle size={18} className="text-indigo-500 dark:text-indigo-400" />
-                                  {responsibility}
-                                </li>
-                              ))}
-                            </ul>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  </button>
-                </div>
-                {/* Timeline indicator */}
-                <div className="hidden md:flex flex-col items-center mx-4">
-                  <div className="w-4 h-4 rounded-full bg-indigo-500"></div>
-                  {idx < experiences.length - 1 && (
-                    <div className="w-1 h-24 bg-indigo-300 dark:bg-indigo-700"></div>
-                  )}
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12" data-aos="fade-up">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">
+            Work Experience
+          </h2>
+          <div className="mt-2 h-1 w-20 bg-indigo-500 mx-auto rounded" data-aos="fade-up" data-aos-delay="100"></div>
+        </div>
+
+        <div className="relative max-w-3xl mx-auto">
+          <div className="absolute left-6 h-full w-0.5 bg-gray-200 dark:bg-gray-700"></div>
+          {experiences.map((exp) => (
+            <div key={exp.id} className="relative pl-16 mb-12" data-aos="fade-up">
+              <div className="absolute left-0 top-0 flex items-center">
+                <div className="w-12 h-12 rounded-full bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700 flex items-center justify-center">
+                  <Briefcase
+                    size={24}
+                    className="text-indigo-600 dark:text-indigo-400"
+                  />
                 </div>
               </div>
-            ))}
-          </div>
+
+              <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-6 transition-all hover:shadow-lg hover:-translate-y-1 border border-gray-100 dark:border-gray-700">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                  <h3 className="text-xl font-bold text-gray-800 dark:text-white">
+                    {exp.role}
+                  </h3>
+                  <p className="text-gray-500 dark:text-gray-400 text-sm mt-1 sm:mt-0">
+                    {exp.period}
+                  </p>
+                </div>
+                <p className="text-indigo-600 dark:text-indigo-400 font-semibold mb-3">
+                  {exp.company}
+                </p>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  {exp.description}
+                </p>
+                {exp.achievements && exp.achievements.length > 0 && (
+                  <ul className="list-none space-y-2">
+                    {exp.achievements.map((achievement, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm">
+                        <CheckCircle size={16} className="text-green-500 dark:text-green-400 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-600 dark:text-gray-400">{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -138,4 +113,3 @@ const Experience: React.FC = () => {
 };
 
 export default Experience;
-

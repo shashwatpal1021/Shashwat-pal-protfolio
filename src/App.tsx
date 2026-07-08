@@ -47,15 +47,14 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-200 overflow-x-hidden">
+    <div className="min-h-screen bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 font-sans transition-colors duration-200">
       <Navbar
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
         isDark={isDark}
         setIsDark={setIsDark}
       />
-
-      <main className="px-2 sm:px-4">
+      <main>
         <Hero />
         <About />
         <Projects />

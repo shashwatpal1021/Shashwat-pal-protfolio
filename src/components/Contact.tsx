@@ -30,19 +30,22 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800 transition-colors duration-200">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 dark:text-white">Get In Touch</h2>
-        <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mb-12">
-          Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
-        </p>
+    <section id="contact" className="py-16 md:py-24 bg-white dark:bg-gray-800 transition-colors duration-200">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12" data-aos="fade-up">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 dark:text-white">Get In Touch</h2>
+          <div className="mt-2 h-1 w-20 bg-indigo-500 mx-auto rounded" data-aos="fade-up" data-aos-delay="100"></div>
+          <p className="text-gray-600 dark:text-gray-400 text-center max-w-2xl mx-auto mt-4" data-aos="fade-up" data-aos-delay="200">
+            Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm p-8">
+          <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8 border border-gray-100 dark:border-gray-700" data-aos="fade-right">
             <h3 className="text-2xl font-bold mb-6 dark:text-white">Send Me a Message</h3>
 
             {submitMessage && (
-              <div className="mb-6 p-4 bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 rounded-lg">
+              <div className="mb-6 p-4 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-lg">
                 {submitMessage}
               </div>
             )}
@@ -102,8 +105,8 @@ const Contact: React.FC = () => {
             </form>
           </div>
 
-          <div className="flex flex-col justify-between">
-            <div>
+          <div className="flex flex-col justify-start" data-aos="fade-left">
+            <div className="bg-white dark:bg-gray-900 rounded-xl shadow-md p-8 border border-gray-100 dark:border-gray-700">
               <h3 className="text-2xl font-bold mb-6 dark:text-white">Contact Information</h3>
 
               <div className="space-y-6">
@@ -113,7 +116,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium dark:text-white">Email</h4>
-                    <a href="mailto:your.email@example.com" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                    <a href="mailto:i.shashwatpal@gmail.com" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                       i.shashwatpal@gmail.com
                     </a>
                   </div>
@@ -125,7 +128,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-medium dark:text-white">Phone</h4>
-                    <a href="tel:+11234567890" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
+                    <a href="tel:+919621938984" className="text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">
                       +91 9621938984
                     </a>
                   </div>
@@ -138,30 +141,12 @@ const Contact: React.FC = () => {
                   <div>
                     <h4 className="text-lg font-medium dark:text-white">Location</h4>
                     <p className="text-gray-600 dark:text-gray-400">
-                      Gurgram Haryana<br />
+                      Gurugram, Haryana<br />
                       India
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="mt-12 bg-indigo-600 dark:bg-indigo-500 rounded-xl p-8 text-white">
-              <h3 className="text-xl font-bold mb-4">Let's Work Together</h3>
-              <p className="mb-6">
-                I'm currently available for freelance work and full-time positions.
-                If you have a project that needs some creative touch, I'd love to help you with it.
-              </p>
-              <a
-                href="#"
-                className="inline-block px-6 py-3 bg-white text-indigo-600 dark:text-indigo-500 rounded-lg font-medium hover:bg-gray-100 dark:hover:bg-gray-100 transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Hire Me
-              </a>
             </div>
           </div>
         </div>

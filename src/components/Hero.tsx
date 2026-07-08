@@ -6,27 +6,26 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="md:pt-32 pb-10 md:pb-24 bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
+      className="min-h-screen flex items-center bg-gray-50 dark:bg-gray-900 transition-colors duration-200"
     >
-      <div className="container mt-10 md:mt-35 p-6 md:p-10 mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 w-full">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 dark:text-white text-center md:text-left">
+      <div className="container mx-auto px-4 py-16">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="animate-fade-in-down">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-4 text-gray-800 dark:text-white">
               Hi, I'm{" "}
-              <span className="text-indigo-600 dark:text-indigo-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">
                 Shashwat Pal
               </span>
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-6 text-center md:text-left">
-              Full Stack Developer
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-gray-700 dark:text-gray-300 mb-6">
+              Senior Software Engineer | AI & Full-Stack
             </h2>
-            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-lg mx-auto md:mx-0 text-center md:text-left">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-xl mx-auto md:mx-0">
               I build exceptional digital experiences that are fast, accessible,
-              visually appealing, and responsive. Let's turn your vision into
-              reality.
+              and visually appealing. Let's turn your vision into reality.
             </p>
 
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start mb-8">
               <a
                 href="#contact"
                 className="group flex items-center px-6 py-3 bg-indigo-600 dark:bg-indigo-500 text-white rounded-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-colors shadow-md"
@@ -39,18 +38,17 @@ const Hero: React.FC = () => {
               >
                 Get in Touch
                 <span className="ml-3 flex items-center">
-                  {/* Circle with animated arrow */}
-                  <span className="relative flex items-center justify-center w-7 h-7">
-                    <span className="absolute inset-0 rounded-full border-2 border-white group-hover:border-yellow-400 transition-colors duration-300"></span>
+                  <span className="relative flex h-6 w-6 items-center justify-center">
+                    <span className="absolute inset-0 rounded-full border-2 border-white transition-colors"></span>
                     <svg
-                      className="relative z-10 w-4 h-4 text-white group-hover:text-yellow-400 transition-colors duration-300 transform group-hover:translate-x-1 group-hover:-rotate-12"
+                      className="relative z-10 h-4 w-4 text-white transition-transform duration-300 group-hover:translate-x-1"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth={2.5}
                       viewBox="0 0 24 24"
                     >
                       <path
-                        d="M5 12h14M13 6l6 6-6 6"
+                        d="m9 5 7 7-7 7"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       />
@@ -61,7 +59,7 @@ const Hero: React.FC = () => {
 
               <a
                 href="https://drive.google.com/file/d/1NeeGhNWmKbmV37knKpr2Tqz8rAFs2uRC/view?usp=sharing"
-                className="px-6 py-3 bg-yellow-600 dark:bg-green-700 text-white rounded-lg hover:bg-green-600 dark:hover:bg-green-800 transition-colors shadow-md"
+                className="px-6 py-3 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors shadow-md"
                 target="_blank"
                 rel="noopener noreferrer"
                 download="Shashwat_Pal_CV.pdf"
@@ -70,22 +68,9 @@ const Hero: React.FC = () => {
               >
                 Download CV
               </a>
-
-              <a
-                href="#projects"
-                className="px-6 py-3 bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 border border-indigo-600 dark:border-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-gray-700 transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document
-                    .getElementById("projects")
-                    ?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                View Projects
-              </a>
             </div>
 
-            <div className="flex mt-8 space-x-4 justify-center md:justify-start">
+            <div className="flex space-x-6 justify-center md:justify-start">
               <a
                 href="https://github.com/shashwatpal1021"
                 target="_blank"
@@ -111,10 +96,11 @@ const Hero: React.FC = () => {
             </div>
           </div>
 
-          <div className="md:w-1/2 w-full flex justify-center mt-10 md:mt-0">
-            <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-indigo-100 dark:bg-indigo-900 flex items-center justify-center relative overflow-hidden">
+          <div className="flex justify-center animate-fade-in-up">
+            <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96">
+              <div className="absolute inset-0 bg-gradient-to-br from-indigo-200 to-purple-200 dark:from-indigo-900 dark:to-purple-900 rounded-full blur-2xl opacity-50"></div>
               <img
-                className="object-cover w-full h-full rounded-full"
+                className="relative object-cover w-full h-full rounded-3xl shadow-lg border-4 border-white dark:border-gray-800"
                 src={shashwatImg}
                 alt="shashwat.pal"
               />
@@ -122,24 +108,27 @@ const Hero: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex justify-center mt-12">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:block">
           <a
             href="#about"
             className="group flex flex-col items-center cursor-pointer"
             aria-label="Scroll to About section"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+            }}
           >
-            <span className="relative flex items-center justify-center w-12 h-12">
-              <span className="absolute inset-0 rounded-full border-2 bg-indigo-400 border-indigo-400 group-hover:border-yellow-400 transition-colors duration-300"></span>
+            <span className="w-8 h-14 border-2 border-gray-500 dark:border-gray-400 rounded-full flex justify-center items-start p-2">
               <svg
-                className="relative z-10 w-6 h-6 text-green-900 group-hover:text-yellow-400 transition-colors duration-300 animate-bounce"
+                className="w-full h-full text-gray-500 dark:text-gray-400 animate-bounce"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.5}
                 viewBox="0 0 24 24"
               >
                 <path
-                  d="M12 5v14M19 12l-7 7-7-7"
-                  strokeLinecap="round"
+                  d="m19 9-7 7-7-7"
+                  strokeLinecap="round" 
                   strokeLinejoin="round"
                 />
               </svg>
