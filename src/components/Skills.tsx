@@ -1,5 +1,5 @@
 import React from "react";
-import { Code, Database, Wrench, Cpu, Cloud, BrainCircuit } from "lucide-react";
+import { Code, Database, Cpu, Cloud, BrainCircuit } from "lucide-react";
 
 interface SkillCategory {
   name: string;
